@@ -13,7 +13,8 @@ mongoose.connect(dbConfig.DB_URL,()=>{
 })
 
 require('./routes/auth.routes')(app);
+require('./routes/user.routes')(app);
 
 app.listen(serverConfig.PORT,() =>{
-    console.log("Application has started on PORT");
+    console.log("Application has started on port",serverConfig.PORT);
 })
